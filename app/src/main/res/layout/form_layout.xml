@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:layout_margin="20px"
+        android:layout_marginTop="20px"
+        android:text="@string/add_new_product"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="@string/product_name" />
+
+    <EditText
+        android:id="@+id/formName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="@string/product_price" />
+
+    <EditText
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:id="@+id/formPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:ems="10"
+        android:text="" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="@string/product_quantity" />
+
+    <EditText
+        android:id="@+id/formQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:ems="10"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:background="@drawable/ic_image_default"
+            android:id="@+id/formPhoto"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="20px"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:background="@color/colorBtn"
+            android:onClick="onSelectPhoto"
+            android:layout_margin="20px"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:text="@string/select_select_photo" />
+    </LinearLayout>
+
+    <Button
+        android:background="@color/colorBtn"
+        android:onClick="onAddProduct"
+        android:layout_margin="20px"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:text="@string/select_add_product" />
+
+</LinearLayout>

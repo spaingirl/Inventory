@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/photoDetail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:text="@string/product_name" />
+
+    <TextView
+        android:id="@+id/nameDetail"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10px"
+            android:text="@string/product_quantity" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:text="@string/product_quantity_increment"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorBtn"
+            android:gravity="center"
+            android:onClick="onDecrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantityDetail"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorBtn"
+            android:gravity="center"
+            android:onClick="onIncrement"
+            android:text="+" />
+
+        <EditText
+            android:id="@+id/quantityIncrement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:digits="0123456789"
+            android:ems="10"
+            android:textAlignment="textEnd"
+            android:inputType="number"
+            android:text="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:text="@string/product_price" />
+
+    <TextView
+        android:id="@+id/priceDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:minHeight="30dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:onClick="onDelete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/remove_product" />
+
+    <Button
+        android:onClick="onOrder"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorBtn"
+        android:gravity="center"
+        android:text="@string/order_from_supplier" />
+
+</LinearLayout>
